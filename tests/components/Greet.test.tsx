@@ -1,8 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import Greet from '../../src/components/Greet'
-import "@testing-library/jest-dom"
-import { it, expect, describe } from 'vitest'
-import React from 'react'; // Add this line
+
 
 describe('Greet', () => {
     it('should render hello with the name when the name render', () => {
@@ -14,9 +12,15 @@ describe('Greet', () => {
     })
 
     it('show login button if name is not render', () => {
-        render(<Greet name="Mosh" />);
+        render(<Greet/>);
 
         const button = screen.getByRole("button");
         expect(button).toBeInTheDocument(); 
+        expect(button).toHaveTextContent(/login/i);
     })
 })                                  
+
+
+// import React from 'react';
+// import "@testing-library/jest-dom" 
+// import { describe, it, expect } from 'vitest';
