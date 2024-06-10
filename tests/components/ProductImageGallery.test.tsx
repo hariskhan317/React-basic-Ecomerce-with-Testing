@@ -1,7 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import ProductImageGallery from '../../src/components/ProductImageGallery';
-import exp from 'constants';
-
+ 
 
 describe("ProductImageGallery", () => {
     it("Should return null if image Lenght is zero", () => {

@@ -1,5 +1,5 @@
 const ProductImageGallery = ({ imageUrls }: { imageUrls: string[] }) => {
-  if (imageUrls.length === 0) return <>dasdgit</>;
+  if (imageUrls.length === 0) return null;
 
   return (
     <ul>
